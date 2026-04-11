@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Diamond Gold — Tic Tac Toe</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Outfit:wght@200;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    @import url('styles.css');
+  </style>
+</head>
+<body>
+
+  <!-- Efeitos de fundo -->
+  <div class="bg-glow bg-glow-1"></div>
+  <div class="bg-glow bg-glow-2"></div>
+  <div class="bg-glow bg-glow-3"></div>
+  <canvas id="particles-canvas" aria-hidden="true"></canvas>
+
+  <!-- Toast de notificação -->
+  <div class="toast" id="toast" role="alert" aria-live="polite"></div>
+
+  <main class="game-container">
+    <!-- Título -->
+    <section class="title-section">
+      <h1><span class="diamond-icon"></span>Tic Tac Toe<span class="diamond-icon"></span></h1>
+      <p class="subtitle">Diamond Edition</p>
+    </section>
+
+    <!-- Seletor de modo -->
+    <nav class="mode-selector" aria-label="Modo de jogo">
+      <button class="mode-btn active" data-mode="pvp" aria-pressed="true">
+        <i class="fas fa-users"></i> vs Player
+      </button>
+      <button class="mode-btn" data-mode="ai" aria-pressed="false">
+        <i class="fas fa-robot"></i> vs Machine
+      </button>
+    </nav>
+
+    <!-- Painel de scores -->
+    <section class="status-panel" aria-label="Placar">
+      <div class="score-card x-card active" id="x-card">
+        <div class="player-label">Player</div>
+        <div class="player-symbol">X</div>
+        <div class="score-value" id="score-x">0</div>
+      </div>
+      <div class="vs-badge">VS</div>
+      <div class="score-card o-card" id="o-card">
+        <div class="player-label" id="o-label">Player</div>
+        <div class="player-symbol">O</div>
+        <div class="score-value" id="score-o">0</div>
+      </div>
+    </section>
+
+    <!-- Indicador de turno -->
+    <div class="turn-indicator" id="turn-indicator">
+      <span class="turn-dot x-dot" id="turn-dot"></span>
+      <span id="turn-text">Vez do X</span>
+    </div>
+
+    <!-- Tabuleiro -->
+    <section class="board-wrapper" aria-label="Tabuleiro do jogo">
+      <div class="board" id="board" role="grid">
+        <!-- Células geradas por JS -->
+      </div>
+      <svg class="win-line-svg" id="win-line-svg" aria-hidden="true"></svg>
+    </section>
+
+    <!-- Controles -->
+    <div class="controls">
+      <button class="btn btn-primary" id="btn-restart" aria-label="Novo jogo">
+        <i class="fas fa-redo-alt"></i> Novo Jogo
+      </button>
+      <button class="btn btn-ghost" id="btn-reset-scores" aria-label="Zerar placar">
+        <i class="fas fa-eraser"></i> Zerar Placar
+      </button>
+    </div>
+  </main>
+
+  <!-- Overlay de resultado -->
+  <div class="result-overlay" id="result-overlay" role="dialog" aria-modal="true" aria-label="Resultado da partida">
+    <div class="result-card">
+      <div class="result-icon" id="result-icon"></div>
+      <div class="result-title" id="result-title"></div>
+      <div class="result-subtitle" id="result-subtitle"></div>
+      <br>
+      <button class="btn btn-primary" id="btn-play-again">
+        <i class="fas fa-gem"></i> Jogar Novamente
+      </button>
+    </div>
+  </div>
+    <script src="script.js"></script>
+    </body>
+</html>
