@@ -1,31 +1,55 @@
-# GOOD README
+# 🎮 Tic Tac Toe
 
-## Overview
+Um jogo clássico da velha (Tic Tac Toe) desenvolvido para praticar lógica de programação, estrutura de código e desenvolvimento de aplicações.
 
-This repository contains the source code for the project. The project is built with [list technologies used].
+## 📌 Sobre o Projeto
 
-## Getting Started
+Este projeto implementa o jogo Tic Tac Toe com foco em:
 
-### Prerequisites
+- Estruturação de lógica de jogo
+- Manipulação de estados (board)
+- Validação de jogadas
+- Detecção de vitória/empate
 
-* [list prerequisites]
+> Projeto criado como parte do meu aprendizado em desenvolvimento de software.
 
-### Installation
+---
 
-* [list installation steps]
+## 🛠️ Tecnologias Utilizadas
 
-### Usage
+- JavaScript / Python / C# (ajusta conforme teu projeto)
+- HTML & CSS (se tiver interface)
+- Lógica de programação
 
-* [list steps to use the project]
+---
 
-## Contributing
+## 🎯 Funcionalidades
 
-* [list contribution instructions]
+- ✔️ Jogo 2 jogadores
+- ✔️ Alternância automática de turnos
+- ✔️ Verificação de vitória
+- ✔️ Detecção de empate
+- ✔️ Interface simples e intuitiva
 
-## License
+---
 
-* [list license information]
+## 🧠 Lógica do Jogo
 
-## Acknowledgments
+O jogo funciona com base em uma matriz 3x3 onde:
 
-* [list acknowledgments]
+- Cada jogador marca sua jogada
+- O sistema verifica:
+  - Linhas
+  - Colunas
+  - Diagonais
+- Caso haja 3 símbolos iguais → vitória
+- Caso o tabuleiro encha → empate
+
+---
+
+## ▶️ Como Executar
+
+### 🔹 Opção 1 — Clonar o repositório
+```bash
+git clone https://github.com/Danielius7er/tic_tac_toe.git
+cd tic_tac_toe
