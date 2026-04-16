@@ -46,7 +46,7 @@ O jogo funciona com base em uma matriz 3x3 onde:
 - Caso o tabuleiro encha → empate
 
 ---
-
+Author: Danielius7_er
 
 ## ▶️ Como Executar
 
@@ -55,5 +55,5 @@ O jogo funciona com base em uma matriz 3x3 onde:
 git clone https://github.com/Danielius7er/tic_tac_toe.git
 cd tic_tac_toe
 
-Author: Danielius7_er
+
 
